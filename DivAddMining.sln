@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivAddMining", "DivAddMining.csproj", "{72D531DF-552B-4018-AA0E-6BDB2EBB72A2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72D531DF-552B-4018-AA0E-6BDB2EBB72A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72D531DF-552B-4018-AA0E-6BDB2EBB72A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72D531DF-552B-4018-AA0E-6BDB2EBB72A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72D531DF-552B-4018-AA0E-6BDB2EBB72A2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AFE1F78F-D53A-41C0-9132-6D80D0E2BEDA}
+	EndGlobalSection
+EndGlobal
