@@ -6,11 +6,15 @@ namespace DivAddMining
 {
     interface IRegression
     {
-        void CalcRegressionRatio(Point[] P);
-
+        /// <summary>
+        ///  Метод для получения значения по регрессионной функции
+        /// </summary>
         double CalcRegressionFunc(double px);
 
-        double CalcSquareDeviation(Point[] P);
+        /// <summary>
+        ///  Метод для вычисления индекса кореляции
+        /// </summary>
+        double CalcSquareDeviation();
 
         public double A0{get;}
 

@@ -65,14 +65,13 @@ namespace DivAddMining
         {
             ArrayInit();
 
-            IRegression ER = new ExponentialRegression();
-            ER.CalcRegressionRatio(arrayOfPoints); // вычисление коэффициентов регрессии
+            IRegression ER = new ExponentialRegression(arrayOfPoints);
 
             if (ER.A0 == 0 && ER.A1 == 0)
               Console.WriteLine("Error");
             else
             {
-                Console.WriteLine("R:" + ER.CalcSquareDeviation(arrayOfPoints).ToString());
+                Console.WriteLine("R:" + ER.CalcSquareDeviation().ToString());
                 Console.WriteLine("A1:" + ER.A1);
                 Console.WriteLine("A0:" + ER.A0);
             }
