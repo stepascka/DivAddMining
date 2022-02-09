@@ -151,6 +151,57 @@ namespace DivAddMining
             return sumLnXSqr;
         }
 
+        protected double SumYdivX()
+        {
+            double sumYdivX = 0;
+
+            try
+            {
+                for (int i = 0; i < N; i++)
+                    sumYdivX += arrayOfPoints[i].Y / arrayOfPoints[i].X;
+
+                return sumYdivX;
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        protected double Sum1divX()
+        {
+            double sum1divX = 0;
+
+            try
+            {
+                for (int i = 0; i < N; i++)
+                    sum1divX += 1 / arrayOfPoints[i].X;
+
+                return sum1divX;
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        protected double Sum1divXSqr()
+        {
+            double sum1divXSqr = 0;
+
+            try
+            {
+                for (int i = 0; i < N; i++)
+                    sum1divXSqr += 1 / Math.Pow(arrayOfPoints[i].X, 2);
+
+                return sum1divXSqr;
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
         protected double AverageY()
         {
             return (SumY() / N);

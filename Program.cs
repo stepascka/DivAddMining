@@ -29,35 +29,35 @@ namespace DivAddMining
             }
             */
 
-            arrayOfPoints[0].X = 1.95;
-            arrayOfPoints[0].Y = 6.1;
+            arrayOfPoints[0].X = 0.96;
+            arrayOfPoints[0].Y = 1.95;
 
-            arrayOfPoints[1].X = 2.58;
-            arrayOfPoints[1].Y = 8.51;
+            arrayOfPoints[1].X = 0.75;
+            arrayOfPoints[1].Y = 2.6;
 
-            arrayOfPoints[2].X = 3.26;
-            arrayOfPoints[2].Y = 10.82;
+            arrayOfPoints[2].X = 0.64;
+            arrayOfPoints[2].Y = 4.28;
 
-            arrayOfPoints[3].X = 4.51;
-            arrayOfPoints[3].Y = 17.92;
+            arrayOfPoints[3].X = 0.55;
+            arrayOfPoints[3].Y = 6.52;
 
-            arrayOfPoints[4].X = 5.14;
-            arrayOfPoints[4].Y = 24.21;
+            arrayOfPoints[4].X = 0.68;
+            arrayOfPoints[4].Y = 4.55;
 
-            arrayOfPoints[5].X = 5.92;
-            arrayOfPoints[5].Y = 33.1;
+            arrayOfPoints[5].X = 0.71;
+            arrayOfPoints[5].Y = 2.91;
 
-            arrayOfPoints[6].X = 6.81;
-            arrayOfPoints[6].Y = 45.51;
+            arrayOfPoints[6].X = 0.95;
+            arrayOfPoints[6].Y = 1.81;
 
-            arrayOfPoints[7].X = 7.45;
-            arrayOfPoints[7].Y = 61.21;
+            arrayOfPoints[7].X = 0.45;
+            arrayOfPoints[7].Y = 8.21;
 
-            arrayOfPoints[8].X = 8.02;
-            arrayOfPoints[8].Y = 72.38;
+            arrayOfPoints[8].X = 0.71;
+            arrayOfPoints[8].Y = 2.84;
 
-            arrayOfPoints[9].X = 8.75;
-            arrayOfPoints[9].Y = 95.24;
+            arrayOfPoints[9].X = 0.63;
+            arrayOfPoints[9].Y = 4.38;
 
         }
 
@@ -65,7 +65,7 @@ namespace DivAddMining
         {
             ArrayInit();
 
-            IRegression ER = new LogRegression(arrayOfPoints);
+            IRegression ER = new HyperRegression(arrayOfPoints);
 
             if (ER.A0 == 0 && ER.A1 == 0)
               Console.WriteLine("Error");
