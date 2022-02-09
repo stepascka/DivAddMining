@@ -131,6 +131,16 @@ namespace DivAddMining
             return sumXLnY;
         }
 
+        protected double SumLnXLnY()
+        {
+            double sumLnXLnY = 0;
+
+            for (int i = 0; i < N; i++)
+                sumLnXLnY += Ln(arrayOfPoints[i].X) * Ln(arrayOfPoints[i].Y);
+
+            return sumLnXLnY;
+        }
+
         protected double SumXSqr()
         {
             double sumXSqr = 0;
@@ -178,6 +188,40 @@ namespace DivAddMining
                     sum1divX += 1 / arrayOfPoints[i].X;
 
                 return sum1divX;
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        protected double Sum1divY()
+        {
+            double sum1divY = 0;
+
+            try
+            {
+                for (int i = 0; i < N; i++)
+                    sum1divY += 1 / arrayOfPoints[i].Y;
+
+                return sum1divY;
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        protected double Sum1divYand1divX()
+        {
+            double sum1divYand1divX = 0;
+
+            try
+            {
+                for (int i = 0; i < N; i++)
+                    sum1divYand1divX += (1 / arrayOfPoints[i].Y) * (1 / arrayOfPoints[i].X);
+
+                return sum1divYand1divX;
             }
             catch
             {

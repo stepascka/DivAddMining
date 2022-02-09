@@ -4,25 +4,22 @@ using System.Text;
 
 namespace DivAddMining
 {
-    class PowerRegression : Regression
+    class FractionalRationalRegression : Regression
     {
-        public PowerRegression(Point[] P) : base(P) { }
+        public FractionalRationalRegression(Point[] P) : base(P) { }
 
         /// <summary>
         ///  Метод для вычисления коэффициентов регрессии
         /// </summary>
         protected override void CalcRegressionRatio()
         {
-            double lnA0 = 0;
-
             try
             {
-                a1 = 0;
-                a1 = (N * SumLnXLnY() - SumLnX() * SumLnY()) / (N * SumLnXSqr() - Math.Pow(SumLnX(), 2));
-
                 a0 = 0;
-                lnA0 = (Math.Pow(N, -1) * (SumLnY() - a1 * SumLnX()));
-                a0 = Math.Pow(Math.E, lnA0);
+                a0 = (N / Sum1divYand1divX() - Sum1divY() * Sum1divX()) / (N * Sum1divXSqr() - Math.Pow(Sum1divX(), 2));
+
+                a1 = 0;
+                a1 = Math.Pow(N, -1) * (Sum1divY() - a1 * Sum1divX());
             }
             catch
             {
@@ -36,7 +33,14 @@ namespace DivAddMining
         /// </summary>
         public override double CalcRegressionFunc(double px)
         {
-            return a0 * Math.Pow(px, a1);
+            try
+            {
+                return px / (a0 * px + a1);
+            }
+            catch
+            {
+                return 0;
+            }
         }
     }
 }

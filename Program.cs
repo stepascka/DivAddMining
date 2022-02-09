@@ -18,46 +18,39 @@ namespace DivAddMining
                 arrayOfPoints[i] = new Point();
 
             // обнуление значений элементов массива
-            for (int i = 0; i < 10; i++)
-                arrayOfPoints[i].SetXY(0, 0);
-            /*
-            // заполнение массива фиксированными значениями
             for (int i = 0; i < arrayOfPoints.Length; i++)
-            {
-                arrayOfPoints[i].X = i + 7;
-                arrayOfPoints[i].Y = i * 2 + 3;
-            }
-            */
+                arrayOfPoints[i].SetXY(0, 0);
 
-            arrayOfPoints[0].X = 0.96;
-            arrayOfPoints[0].Y = 1.95;
 
-            arrayOfPoints[1].X = 0.75;
-            arrayOfPoints[1].Y = 2.6;
+            arrayOfPoints[0].X = 2.21;
+            arrayOfPoints[0].Y = 9.63;
 
-            arrayOfPoints[2].X = 0.64;
-            arrayOfPoints[2].Y = 4.28;
+            arrayOfPoints[1].X = 17.45;
+            arrayOfPoints[1].Y = 25.92;
 
-            arrayOfPoints[3].X = 0.55;
-            arrayOfPoints[3].Y = 6.52;
+            arrayOfPoints[2].X = 8.6;
+            arrayOfPoints[2].Y = 31.6;
 
-            arrayOfPoints[4].X = 0.68;
-            arrayOfPoints[4].Y = 4.55;
+            arrayOfPoints[3].X = 61.05;
+            arrayOfPoints[3].Y = 17.71;
 
-            arrayOfPoints[5].X = 0.71;
-            arrayOfPoints[5].Y = 2.91;
+            arrayOfPoints[4].X = 5.76;
+            arrayOfPoints[4].Y = 14.87;
 
-            arrayOfPoints[6].X = 0.95;
-            arrayOfPoints[6].Y = 1.81;
+            arrayOfPoints[5].X = 33.38;
+            arrayOfPoints[5].Y = 44.03;
 
-            arrayOfPoints[7].X = 0.45;
-            arrayOfPoints[7].Y = 8.21;
+            arrayOfPoints[6].X = 16.22;
+            arrayOfPoints[6].Y = 13.7;
 
-            arrayOfPoints[8].X = 0.71;
-            arrayOfPoints[8].Y = 2.84;
+            arrayOfPoints[7].X = 3.88;
+            arrayOfPoints[7].Y = 9.13;
 
-            arrayOfPoints[9].X = 0.63;
-            arrayOfPoints[9].Y = 4.38;
+            arrayOfPoints[8].X = 0.75;
+            arrayOfPoints[8].Y = 3.86;
+
+            arrayOfPoints[9].X = 149.3;
+            arrayOfPoints[9].Y = 170.45;
 
         }
 
@@ -65,7 +58,7 @@ namespace DivAddMining
         {
             ArrayInit();
 
-            IRegression ER = new PowerRegression(arrayOfPoints);
+            IRegression ER = new ExponentialRegression(arrayOfPoints);
 
             if (ER.A0 == 0 && ER.A1 == 0)
               Console.WriteLine("Error");
