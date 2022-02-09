@@ -91,6 +91,16 @@ namespace DivAddMining
             }
         }
 
+        protected double SumLnX()
+        {
+            double sumLnX = 0;
+
+            for (int i = 0; i < N; i++)
+                sumLnX += Ln(arrayOfPoints[i].X);
+
+            return sumLnX;
+        }
+
         protected double SumLnY()
         {
             double sumLnY = 0;
@@ -99,6 +109,16 @@ namespace DivAddMining
                 sumLnY += Ln(arrayOfPoints[i].Y);
 
             return sumLnY;
+        }
+
+        protected double SumLnXY()
+        {
+            double sumLnXY = 0;
+
+            for (int i = 0; i < N; i++)
+                sumLnXY += arrayOfPoints[i].Y * Ln(arrayOfPoints[i].X);
+
+            return sumLnXY;
         }
 
         protected double SumXLnY()
@@ -119,6 +139,16 @@ namespace DivAddMining
                 sumXSqr += Math.Pow(arrayOfPoints[i].X, 2);
 
             return sumXSqr;
+        }
+
+        protected double SumLnXSqr()
+        {
+            double sumLnXSqr = 0;
+
+            for (int i = 0; i < N; i++)
+                sumLnXSqr += Math.Pow(Ln(arrayOfPoints[i].X), 2);
+
+            return sumLnXSqr;
         }
 
         protected double AverageY()

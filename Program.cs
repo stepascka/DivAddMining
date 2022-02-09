@@ -65,7 +65,7 @@ namespace DivAddMining
         {
             ArrayInit();
 
-            IRegression ER = new ExponentialRegression(arrayOfPoints);
+            IRegression ER = new LogRegression(arrayOfPoints);
 
             if (ER.A0 == 0 && ER.A1 == 0)
               Console.WriteLine("Error");
